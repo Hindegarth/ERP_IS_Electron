@@ -4,14 +4,18 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-win": "electron-packager . erp_is_electron --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"erp_is_electron\""  
   },
   "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^16.0.7"
+  },
+  "dependencies": {
+    "electron-packager": "^15.4.0",
+    "xlsx": "^0.17.5"
   }
 }
