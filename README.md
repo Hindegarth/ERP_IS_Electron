@@ -1,5 +1,31 @@
 # ERP_IS_Electron
 Desktop aplication for using 'Pago facil' from BancoEstado seven columns
 
-For make a executable run:
- npm run package-win
+## Inciar servidor
+
+En el direcctorio del proyecto, puedes arrancarlo:
+
+Para verlo en la aplicaciond de escritorio
+
+### `npm run electron-react`
+
+Para correr la aplicion en navegador
+### `npm start`
+
+## Compilar
+Para compilar el proyecto ( Win version)
+
+### `npm run package-win`
+
+
+## Documentacion
+Podemos encontrar documentacion sobre el componente Electon en su página web.
+### FrameWork
+[React] (https://es.reactjs.org/docs/getting-started.html)
+### BrowserWindow
+[Documentacion Electron](https://www.electronjs.org/docs/api/browser-window)
+### UI Librery 
+[React Bootstrap](https://react-bootstrap.github.io)
+
+
+
