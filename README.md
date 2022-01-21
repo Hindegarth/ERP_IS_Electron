@@ -23,9 +23,9 @@ Podemos encontrar documentacion sobre el componente Electon en su página web.
 ### FrameWork
 [React] (https://es.reactjs.org/docs/getting-started.html)
 ### BrowserWindow
-[Documentacion Electron](https://www.electronjs.org/docs/api/browser-window)
+[DocumentacionElectron] (https://www.electronjs.org/docs/api/browser-window)
 ### UI Librery 
-[React Bootstrap](https://react-bootstrap.github.io)
+[ReactBootstrap] (https://react-bootstrap.github.io)
 
 
 
