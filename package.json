@@ -12,6 +12,7 @@
     "electron-packager": "^15.4.0",
     "react": "^17.0.1",
     "react-bootstrap": "^2.1.1",
+    "react-data-table-component": "^7.4.7",
     "react-dom": "^17.0.1",
     "react-scripts": "^5.0.0",
     "wait-on": "^5.2.0",
@@ -25,7 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron-dev": "concurrently \"SET BROWSER=none && npm start\" \"wait-on http://localhost:3000 && electron .\"",
-    "package-win": "electron-packager . erp_is_electron --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"erp_is_electron\""
+    "package-win": "electron-packager . erp_is_electron --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"erp_is_electron\"",
+    "electron2": "electron ."
   },
   "eslintConfig": {
     "extends": [

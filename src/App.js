@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import * as XLSX from "xlsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import HelloWorld from "./components/HelloWorld"
+import UserContext from "./context/UserContext";
+import TableWorkers from "./components/TableWorkers"
+import contextApp from "./hooks/contextApp";
+
 
 function listWorkers(fileName) {
   //const [items, setItems] = useState([]);
@@ -52,15 +57,21 @@ function App() {
             account: "18427xxx",
             email: "vt@mail.com",
           },
-        ],
+        ],  
       };
   return (
-    <Container>
-      <h1>Hello world</h1>
-      <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
+    <Container> 
+      <UserContext.Provider value = {contextApp}>
+        <HelloWorld/>
+        <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
         Lista de trabajadores desde excel
-      </Button>
+        </Button>
+      </UserContext.Provider>
+
+      <TableWorkers/>
+
     </Container>
+    
   );
 }
 export default App;

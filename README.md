@@ -28,4 +28,6 @@ Podemos encontrar documentacion sobre el componente Electon en su página web.
 [ReactBootstrap] (https://react-bootstrap.github.io)
 
 
+### light dependencies
 
+[DataTable] (https://www.npmjs.com/package/react-data-table-component)
