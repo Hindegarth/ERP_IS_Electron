@@ -61,12 +61,10 @@ function App() {
       };
   return (
     <Container> 
-      <UserContext.Provider value = {contextApp}>
         <HelloWorld/>
         <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
         Lista de trabajadores desde excel
         </Button>
-      </UserContext.Provider>
 
       <TableWorkers/>
 
