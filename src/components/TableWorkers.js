@@ -1,22 +1,7 @@
 import React from "react";
 import DataTable from "react-data-table-component";
-
-const workers = [
-  {
-    name: "Bruno Ignacio Silva Paredes",
-    bank: "Banco Estado",
-    accountType: "CuentaRut",
-    account: "18708xxx",
-    email: "bs@mail.com",
-  },
-  {
-    name: "Victoria Tejer",
-    bank: "Banco Estado",
-    accountType: "CuentaRut",
-    account: "18427xxx",
-    email: "vt@mail.com",
-  }
-];
+import DataWorkers from "../context/DataWorkers";
+import contextWorkers from "../hooks/contextWorkers";
 
 const columnsTable = [
   {
@@ -54,24 +39,27 @@ const pageOptions = {
 };
 
 export default function tableWorkers() {
+  const { workers } = contextWorkers();
   return (
     <div>
-      <DataTable
-        columns={columnsTable}
-        data={workers}
-        title="Tablita"
-        pagination
-        paginationComponentOptions={pageOptions}
-        fixedHeader
-        fixedHeaderScrollHeight="600px"
-        /*
+      <DataWorkers.Provider value={workers}>
+        <DataTable
+          columns={columnsTable}
+          data={workers}
+          title="Tablita"
+          pagination
+          paginationComponentOptions={pageOptions}
+          fixedHeader
+          fixedHeaderScrollHeight="600px"
+          /*
         actions={{
             icon: "delete",
             tooltip: "Delete Worker",
             onClick: (event, rowData) => alert("borrar?" + rowData.name)
             }}
             */
-      />
+        />
+      </DataWorkers.Provider>
     </div>
   );
 }
