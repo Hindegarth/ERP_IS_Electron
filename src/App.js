@@ -4,7 +4,7 @@ import * as XLSX from "xlsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import HelloWorld from "./components/HelloWorld";
-import TableWorkers from "./components/TableWorkers";
+import TableWorkers from "./components/TableWorkers"; 
 
     
 function listWorkers(fileName) {
