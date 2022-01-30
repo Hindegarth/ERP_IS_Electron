@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import DataTable from "react-data-table-component";
-import DataWorkers from "../context/DataWorkers";
-import contextWorkers from "../hooks/contextWorkers";
+import UserContext from "../context/UserContext";
+import contextApp from "../hooks/contextApp";
+
+require("es6-promise").polyfill();  
+require("isomorphic-fetch");
 
 const columnsTable = [
   {
@@ -25,8 +28,24 @@ const columnsTable = [
     sortable: true,
   },
   {
+    title: "Numero de Cuenta",
+    selector: "accountNumber",
+    sortable: true,
+  },
+  {
+    title: "Rut",
+    selector: "rut",
+    sortable: true,
+  },
+
+  {
     title: "Email",
     selector: "email",
+    sortable: true,
+  },
+  {
+    title: "Phone",
+    selector: "phone",
     sortable: true,
   },
 ];
@@ -39,28 +58,33 @@ const pageOptions = {
 };
 
 
-export default function tableWorkers() {
-  const { workers } = contextWorkers();
+export default function TableWorkers() {
+  
+  const { workers } = contextApp();
+
+  const [q,setQ] = useState("");
+  
+  function search(rows) {
+    return rows.filter((row) => row.name.toLowerCase().indexOf(q) > -1);
+  }
+
+
   return (
     <div>
-      <DataWorkers.Provider value={workers}>
+      <UserContext.Provider value={workers}>
+        <input type = "text" value ={q} onChange={(e) => setQ(e.target.value)} input/>
         <DataTable
           columns={columnsTable}
-          data={workers}
+          data={search(workers)}
           title="Tablita"
+          
           pagination
           paginationComponentOptions={pageOptions}
           fixedHeader
           fixedHeaderScrollHeight="600px"
-          /*
-        actions={{
-            icon: "delete",
-            tooltip: "Delete Worker",
-            onClick: (event, rowData) => alert("borrar?" + rowData.name)
-            }}
-            */
+          
         />
-      </DataWorkers.Provider>
+      </UserContext.Provider>
     </div>
   );
 }

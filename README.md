@@ -30,4 +30,7 @@ Podemos encontrar documentacion sobre el componente Electon en su página web.
 
 ### light dependencies
 
+npm install --save isomorphic-fetch
+npm install --save es6-promise
+
 [DataTable] (https://www.npmjs.com/package/react-data-table-component)

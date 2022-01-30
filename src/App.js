@@ -3,12 +3,10 @@ import { Button, Container, Table } from "react-bootstrap";
 import * as XLSX from "xlsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import HelloWorld from "./components/HelloWorld"
-import UserContext from "./context/UserContext";
-import TableWorkers from "./components/TableWorkers"
-import contextApp from "./hooks/contextApp";
+import HelloWorld from "./components/HelloWorld";
+import TableWorkers from "./components/TableWorkers";
 
-
+    
 function listWorkers(fileName) {
   //const [items, setItems] = useState([]);
   const readExcel = (file) => {
@@ -57,19 +55,17 @@ function App() {
             account: "18427xxx",
             email: "vt@mail.com",
           },
-        ],  
+        ],
       };
   return (
-    <Container> 
-        <HelloWorld/>
-        <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
+    <Container>
+      <HelloWorld />
+      
+      <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
         Lista de trabajadores desde excel
-        </Button>
-
-      <TableWorkers/>
-
+      </Button>
+      <TableWorkers />
     </Container>
-    
   );
 }
 export default App;
