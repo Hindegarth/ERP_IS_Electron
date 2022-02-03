@@ -64,7 +64,7 @@ function App() {
       <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
         Lista de trabajadores desde excel
       </Button>
-      <TableWorkers />
+      <TableWorkers/>
     </Container>
   );
 }
