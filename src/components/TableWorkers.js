@@ -1,10 +1,7 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import UserContext from "../context/UserContext";
 import contextApp from "../hooks/contextApp";
-
-require("es6-promise").polyfill();
-require("isomorphic-fetch");
 
 const pageOptions = {
   rowPerPageText: "filas por Página",
