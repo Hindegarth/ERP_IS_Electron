@@ -4,7 +4,7 @@ import * as XLSX from "xlsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import HelloWorld from "./components/HelloWorld";
-import TableWorkers from "./components/TableWorkers"; 
+import TableWorker from "./components/TableWorker"; 
 
     
 function listWorkers(fileName) {
@@ -64,7 +64,7 @@ function App() {
       <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
         Lista de trabajadores desde excel
       </Button>
-      <TableWorkers/>
+      <TableWorker/>
     </Container>
   );
 }
