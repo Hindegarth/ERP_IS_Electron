@@ -17,6 +17,9 @@ const ReadRow = ({contact, handleEditClick, handleDeleteClick }) => {
         >
           Edit  
         </button>
+        <button type="button" onClick={() => handleDeleteClick(contact.id)}>
+          Delete
+        </button>
       </td>
     </tr>
   );

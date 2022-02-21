@@ -82,6 +82,16 @@ const TableWorker = () => {
   const handleCancelClick = () => {
     setEditContactRut(null);
   };
+  // accion de borrar una fila, usando el rut como indice de la fila a borrar
+  const handleDeleteClick = (contactRut) => {
+    const newContacts = [...contacts];
+
+    const index = contacts.findIndex((contact) => contact.rut === contactRut);
+
+    newContacts.splice(index, 1);
+
+    setContacts(newContacts);
+  };
 
   // Estado de la fila
   const [rowState, setRowState] = useState("");
@@ -133,6 +143,7 @@ const TableWorker = () => {
                     <ReadRow
                       contact={contact}
                       handleEditClick={handleEditClick}
+                      handleDeleteClick={handleDeleteClick}
                     />
                   )}
                 </Fragment>
