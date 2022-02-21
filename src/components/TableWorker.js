@@ -9,6 +9,17 @@ const TableWorker = () => {
 
   const [contacts, setContacts] = useState(workers);
 
+  // Escructura de la adicion de workers y su estado
+  const [addFormData, setAddFormData] = useState({
+    name: "",
+    bank: "",
+    accountType: "",
+    accountNumber: "",
+    rut: "",
+    email: "",
+    phone: "",
+  });
+
   // Escructura de la edicion de workers y su estado
   const [editFormData, setEditFormData] = useState({
     name: "",
@@ -23,6 +34,18 @@ const TableWorker = () => {
   // Indice donde indica que fila sera editada, si el rut se repite, ambas filas se cambiaran.
   const [editContactRut, setEditContactRut] = useState(null);
 
+  // Celdas donde se pone la informacion nueva, en este caso de añadir fila
+  const handleAddFormChange = (event) => {
+    event.preventDefault();
+
+    const fieldName = event.target.getAttribute("name");
+    const fieldValue = event.target.value;
+
+    const newFormData = { ...addFormData };
+    newFormData[fieldName] = fieldValue;
+
+    setAddFormData(newFormData);
+  };
 
   // Celdas donde se pone la informacion nueva, en este caso de edicion 
   const handleEditFormChange = (event) => {
@@ -35,6 +58,23 @@ const TableWorker = () => {
     newFormData[fieldName] = fieldValue;
 
     setEditFormData(newFormData);
+  };
+  // entrega la nueva informacion de la fila a añadir
+  const handleAddFormSubmit = (event) => {
+    event.preventDefault();
+
+    const newContact = {
+      name: addFormData.name,
+      bank: addFormData.bank,
+      accountType: addFormData.accountType,
+      accountNumber: addFormData.accountNumber,
+      rut: addFormData.rut,
+      email: addFormData.email,
+      phone: addFormData.phone,
+    };
+
+    const newContacts = [...contacts, newContact];
+    setContacts(newContacts);
   };
   // entrega la nueva informacion de la fila editada
   const handleEditFormSubmit = (event) => {
@@ -152,6 +192,59 @@ const TableWorker = () => {
           </table>
         </form>
 
+        <h2>Add a Contact</h2>
+        <form onSubmit={handleAddFormSubmit}>
+          <input
+            type="text"
+            name="name"
+            required="required"
+            placeholder="Enter a name..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="text"
+            name="bank"
+            required="required"
+            placeholder="Enter an bank..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="text"
+            name="accountType"
+            required="required"
+            placeholder="Enter a phone accountType..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="text"
+            name="accountNumber"
+            required="required"
+            placeholder="Enter an accountNumber..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="text"
+            name="rut"
+            required="required"
+            placeholder="Enter an rut..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="email"
+            name="email"
+            required="required"
+            placeholder="Enter an email..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="text"
+            name="phone"
+            required="required"
+            placeholder="Enter an phone..."
+            onChange={handleAddFormChange}
+          />
+          <button type="submit">Add</button>
+        </form>
       </div>
     </UserContext.Provider>
   );
