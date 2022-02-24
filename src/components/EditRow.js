@@ -7,7 +7,7 @@ const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
         <input
           type="name"
           required="required"
-          placeholder="Enter a name..."
+          placeholder="Ingresa un Nombre..."
           name="name"
           value={editFormData.name}
           onChange={handleEditFormChange}
@@ -17,7 +17,7 @@ const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
         <input
           type="bank"
           required="required"
-          placeholder="Enter an bank..."
+          placeholder="Ingresa un Banco..."
           name="bank"
           value={editFormData.bank}
           onChange={handleEditFormChange}
@@ -27,7 +27,7 @@ const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
         <input
           type="accountType"
           required="required"
-          placeholder="Enter a accountType..."
+          placeholder="Ingresa el Tipo de cuenta..."
           name="accountType"
           value={editFormData.accountType}
           onChange={handleEditFormChange}
@@ -37,7 +37,7 @@ const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
         <input
           type="accountNumber"
           required="required"
-          placeholder="Enter an accountNumber..."
+          placeholder="Ingresa un Numero de cuenta..."
           name="accountNumber"
           value={editFormData.accountNumber}
           onChange={handleEditFormChange}
@@ -47,7 +47,7 @@ const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
         <input
           type="rut"
           required="required"
-          placeholder="Enter an rut..."
+          placeholder="Ingresa un Rut..."
           name="rut"
           value={editFormData.rut}
           onChange={handleEditFormChange}
@@ -57,7 +57,7 @@ const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
         <input
           type="email"
           required="required"
-          placeholder="Enter an email..."
+          placeholder="Ingresa un Email..."
           name="email"
           value={editFormData.email}
           onChange={handleEditFormChange}
@@ -66,8 +66,7 @@ const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
       <td>
         <input
           type="phone"
-          required="required"
-          placeholder="Enter an phone..."
+          placeholder="Ingresa un Numero Telefónico..."
           name="phone"
           value={editFormData.phone}
           onChange={handleEditFormChange}

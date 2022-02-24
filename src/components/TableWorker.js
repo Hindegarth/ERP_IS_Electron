@@ -40,7 +40,7 @@ const TableWorker = () => {
 
     const fieldName = event.target.getAttribute("name");
     const fieldValue = event.target.value;
-
+    
     const newFormData = { ...addFormData };
     newFormData[fieldName] = fieldValue;
 
@@ -53,8 +53,9 @@ const TableWorker = () => {
 
     const fieldName = event.target.getAttribute("name");
     const fieldValue = event.target.value;
-
+    
     const newFormData = { ...editFormData };
+    
     newFormData[fieldName] = fieldValue;
 
     setEditFormData(newFormData);
@@ -144,7 +145,6 @@ const TableWorker = () => {
     );
   }
 
-  console.log(contacts)
   return (
     <UserContext.Provider value={workers}>
       <div className="app-container">
@@ -198,49 +198,49 @@ const TableWorker = () => {
             type="text"
             name="name"
             required="required"
-            placeholder="Enter a name..."
+            placeholder="Ingresa un Nombre..."
             onChange={handleAddFormChange}
           />
           <input
             type="text"
             name="bank"
             required="required"
-            placeholder="Enter an bank..."
+            placeholder="Ingresa un Banco..."
             onChange={handleAddFormChange}
           />
           <input
             type="text"
             name="accountType"
             required="required"
-            placeholder="Enter a phone accountType..."
+            placeholder="Ingresa un Tipo de cuenta..."
             onChange={handleAddFormChange}
           />
           <input
             type="text"
             name="accountNumber"
             required="required"
-            placeholder="Enter an accountNumber..."
+            placeholder="Ingresa un Numero de cuenta..."
             onChange={handleAddFormChange}
           />
           <input
             type="text"
             name="rut"
             required="required"
-            placeholder="Enter an rut..."
+            placeholder="Ingresa un Rut..."
             onChange={handleAddFormChange}
           />
           <input
             type="email"
             name="email"
             required="required"
-            placeholder="Enter an email..."
+            placeholder="Ingresa un Email..."
             onChange={handleAddFormChange}
           />
           <input
             type="text"
             name="phone"
             required="required"
-            placeholder="Enter an phone..."
+            placeholder="Ingresa un Numero Telefónico..."
             onChange={handleAddFormChange}
           />
           <button type="submit">Add</button>
