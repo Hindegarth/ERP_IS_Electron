@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* table worker */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ffffff;
+  text-align: left;
+  padding: 5px;
+  font-size: 32px;
+}
+
+th {
+  background-color: rgb(66, 177, 241);
+}
+
+td {
+  background-color: rgb(196, 231, 253);
+}
+
+form {
+  display: flex;
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 13px;
+}

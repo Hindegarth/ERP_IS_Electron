@@ -45,6 +45,7 @@ const TableWorker = () => {
     newFormData[fieldName] = fieldValue;
 
     setAddFormData(newFormData);
+    workers.append(newFormData);
   };
 
   // Celdas donde se pone la informacion nueva, en este caso de edicion 
@@ -153,7 +154,7 @@ const TableWorker = () => {
           value={rowState}
           placeholder="Ingresa Nombre o RUT"
           onChange={(newSearch) => setRowState(newSearch.target.value)}
-          input
+          
         />
 
         <form onSubmit={handleEditFormSubmit}>
@@ -239,7 +240,6 @@ const TableWorker = () => {
           <input
             type="text"
             name="phone"
-            required="required"
             placeholder="Ingresa un Numero Telefónico..."
             onChange={handleAddFormChange}
           />
