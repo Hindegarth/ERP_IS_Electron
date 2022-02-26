@@ -62,11 +62,11 @@ td {
 }
 
 th {
-  background-color: rgb(66, 177, 241);
+  background-color: rgb(255, 152, 1);
 }
 
 td {
-  background-color: rgb(196, 231, 253);
+  background-color: rgb(240, 240, 240);
 }
 
 form {
@@ -81,4 +81,31 @@ form td:last-child {
 
 form * {
   font-size: 13px;
+}
+
+searcher{
+  display: flex;
+  gap: 4px;
+  padding: 1rem;
+}
+
+sh {
+  padding: 6px;
+  background-color: rgb(255, 152, 1);
+  font-size: 14px;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+ 
+ac {
+  padding: 5px;
+  background-color: rgb(255, 152, 1);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*imagenes*/
+
+img {
+  height: 10xp;
 }

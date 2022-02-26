@@ -58,12 +58,20 @@ function App() {
         ],
       };
   return (
-    <Container>
+
+      /*
       <HelloWorld />
+        
+        
+        <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
+          Lista de trabajadores desde excel
+        </Button>
+        esto va adentro de container*/
+    <Container>
       
-      <Button onClick={() => console.log("listWorkers:", listWorkers2)}>
-        Lista de trabajadores desde excel
-      </Button>
+      <div>
+        <img  style={{ width: 300, height: 100}} src={require("./images/bancoestado.png")} alt = "./images/bancoestado.png" />
+      </div>
       <TableWorker/>
     </Container>
   );

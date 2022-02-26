@@ -148,15 +148,18 @@ const TableWorker = () => {
 
   return (
     <UserContext.Provider value={workers}>
-      <div className="app-container">
+
+      <searcher>
+      <sh>Buscar Trabajador: </sh>
         <input
           type="text"
           value={rowState}
           placeholder="Ingresa Nombre o RUT"
           onChange={(newSearch) => setRowState(newSearch.target.value)}
-          
         />
+      </searcher>
 
+      <div className="app-container">
         <form onSubmit={handleEditFormSubmit}>
           <table>
             <thead>
@@ -193,7 +196,7 @@ const TableWorker = () => {
           </table>
         </form>
 
-        <h2>Add a Contact</h2>
+        <ac>Add a Contact</ac>
         <form onSubmit={handleAddFormSubmit}>
           <input
             type="text"
