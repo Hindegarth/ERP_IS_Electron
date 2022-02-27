@@ -126,10 +126,10 @@ const TableWorker = () => {
   };
   // accion de borrar una fila, usando el rut como indice de la fila a borrar
   const handleDeleteClick = (contactRut) => {
+    console.log(contactRut)
     const newContacts = [...contacts];
-
-    const index = contacts.findIndex((contact) => contact.rut === contactRut);
-
+    const index = contacts.findIndex((contact) => contact.rut === contactRut );
+    console.log(index )
     newContacts.splice(index, 1);
 
     setContacts(newContacts);
